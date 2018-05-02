@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<!--
+   Web App Starter Kit for Fire TV
+
+   Name: web-app-starter-kit-for-fire-tv
+   Version: 1.3.0
+
+   https://github.com/amzn/web-app-starter-kit-for-fire-tv
+
+   The project is released as open source under the Creative Commons License CC0
+
+   http://creativecommons.org/publicdomain/zero/1.0/
+-->
+<html lang='en'>
+<head>
+    <title>
+        Hello World !
+    </title>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        /**
+         * This script will set the 'initial-scale' value on the viewport metatag
+         * The scale is used to fit the template on Kindle Fire mobile devices
+         * This must be handled in the head of the document because the scale
+         * is not affected once the page finishes loading
+         */
+        var vp = document.getElementById('viewport');
+
+        var initialScale = Math.max(screen.width, screen.height)/1920;
+
+        vp.setAttribute('content','width=device-width, initial-scale=' + initialScale + ', maximum-scale=' + initialScale, + 'minimum-scale=' + initialScale);
+
+    </script>
+    <link rel="stylesheet" type="text/css" href="firetv.css" inline>
+</head>
+
+<body>
+    <div>This is a test page to see if a simple html page can  be run in fire tv.</div>
+    <script src="js/jquery.js"></script>
+</body>
+</html>
